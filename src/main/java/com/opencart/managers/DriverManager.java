@@ -3,6 +3,7 @@ package com.opencart.managers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -22,7 +23,12 @@ public class DriverManager {
                 System.out.println("The Firefox Driver is initiated");
                 break;
             case "EDGE":
-                driver = new EdgeDriver();
+                EdgeOptions options = new EdgeOptions();
+                options.addArguments("user-data-dir=C:\\Users\\Frunza Stefan\\AppData\\Local\\Microsoft\\Edge\\User Data");
+                options.addArguments("profile-directory=Default");
+                options.addArguments("ignore-certificate-errors");
+                options.addArguments("--start-maximized");
+                driver = new EdgeDriver(options);
                 System.out.println("The Edge Driver is initiated");
                 break;
             case "SAFARI":
@@ -39,6 +45,12 @@ public class DriverManager {
             instance = new DriverManager();
         }
         return instance;
+    }
+
+    public void tearDown(){
+        driver.close();
+        driver.quit();
+        driver = null;
     }
 
     public WebDriver getDriver(){
