@@ -24,10 +24,11 @@ public class DriverManager {
                 break;
             case "EDGE":
                 EdgeOptions options = new EdgeOptions();
-                options.addArguments("user-data-dir=C:\\Users\\Frunza Stefan\\AppData\\Local\\Microsoft\\Edge\\User Data");
-                options.addArguments("profile-directory=Default");
+//                options.addArguments("user-data-dir=C:\\Users\\Frunza Stefan\\AppData\\Local\\Microsoft\\Edge\\User Data");
+//                options.addArguments("profile-directory=Default");
                 options.addArguments("ignore-certificate-errors");
                 options.addArguments("--start-maximized");
+                options.addArguments("--incognito");
                 driver = new EdgeDriver(options);
                 System.out.println("The Edge Driver is initiated");
                 break;
