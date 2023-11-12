@@ -55,6 +55,15 @@ public class DriverManager {
         driver = null;
     }
 
+    public void deleteAllCookies(){
+        driver.manage().deleteAllCookies();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public WebDriver getDriver(){
         return driver;
     }
