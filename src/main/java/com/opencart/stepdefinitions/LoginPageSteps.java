@@ -16,8 +16,4 @@ public class LoginPageSteps {
         loginPage.fillInTheLoginForm(loginCredentials.get(0), loginCredentials.get(1));
     }
 
-    @And("Login button is clicked")
-    public void loginButtonIsClicked() {
-        loginPage.clickTheLoginBtn();
-    }
 }

@@ -40,7 +40,4 @@ public class RegisterPage extends Page{
         }
     }
 
-    public void clickTheContinueButton(){
-        continueBtn.click();
-    }
 }

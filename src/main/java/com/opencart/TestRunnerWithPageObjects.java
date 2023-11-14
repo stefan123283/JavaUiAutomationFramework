@@ -28,7 +28,6 @@ public class TestRunnerWithPageObjects {
 
         registerPage.fillInTheRegisterForm(RandomDataManager.generateFirstName(), RandomDataManager.generateLastName(), randomEmail, password, true);
 
-        registerPage.clickTheContinueButton();
 
         AccountCreatedPage accountCreatedPage = new AccountCreatedPage(driver);
 
@@ -45,8 +44,6 @@ public class TestRunnerWithPageObjects {
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.fillInTheLoginForm(randomEmail, password);
-
-        loginPage.clickTheLoginBtn();
 
         accountPage.logoutFromAccountPage();
 

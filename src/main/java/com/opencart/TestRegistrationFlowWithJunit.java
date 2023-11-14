@@ -41,8 +41,6 @@ public class TestRegistrationFlowWithJunit {
 
         registerPage.fillInTheRegisterForm(RandomDataManager.generateFirstName(), RandomDataManager.generateLastName(), randomEmail, password, true);
 
-        registerPage.clickTheContinueButton();
-
         Thread.sleep(500);
         String currentUrl = driver.getCurrentUrl();
 
@@ -60,8 +58,6 @@ public class TestRegistrationFlowWithJunit {
 
         registerPage.fillInTheRegisterForm(RandomDataManager.generateFirstName(), RandomDataManager.generateLastName(), randomEmail, "1", true);
 
-        registerPage.clickTheContinueButton();
-
         Thread.sleep(500);
         String actualUrl = driver.getCurrentUrl();
         String expectedUrl = "https://andreisecuqa.host/index.php?route=account/register&language=en-gb";
@@ -77,8 +73,6 @@ public class TestRegistrationFlowWithJunit {
         System.out.println(randomEmail);
 
         registerPage.fillInTheRegisterForm(RandomDataManager.generateFirstName(), RandomDataManager.generateLastName(), randomEmail, "Aa1", true);
-
-        registerPage.clickTheContinueButton();
 
         Thread.sleep(500);
 
