@@ -42,5 +42,5 @@ Feature: Register Flow Test Suite
     Examples:
       | impacted attribute | firstName                         | lastName                          | emailData   | passwordData |
       | First Name         | 128394039489203849492930492939493 | Random                            | RandomEmail | Random       |
-      | Last Name          | Andrei                            | 128394039489203849492930492939493 | RandomEmail     | Random       |
+      | Last Name          | Andrei                            | 128394039489203849492930492939493 | RandomEmail | Random       |
 
